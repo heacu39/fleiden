@@ -9,7 +9,7 @@ application = app
 r = redis.Redis(host='178.62.124.120', port=6379)
 
 def parseJSON(doc):
-    doc.json = json.loads(doc.json)
+    doc = json.loads(doc.json)
     return doc
     
 @app.route('/')
@@ -21,5 +21,5 @@ def search_get():
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"@value:{{{term}}}"))
     docs = map(parseJSON, res.docs)
-    #return docs
-    return render_template('results.html', docs=docs)
+    return docs
+    #return render_template('results.html', docs=docs)
