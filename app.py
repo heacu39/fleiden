@@ -15,7 +15,7 @@ def hello_world():
     return 'Hello Fleiden!'
     
 @app.route("/search/<lepcha>")
-def entries(prefix):
+def entries(lepcha):
     q = Query(f"@value:{{{lepcha}}}").paging(0, 9999)
     res = red.ft('jvm').search(q)
     docs = map(parseJSON, res.docs)
