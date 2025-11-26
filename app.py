@@ -8,10 +8,6 @@ application = app
 
 r = redis.Redis(host='178.62.124.120', port=6379)
 
-#def parseJSON(doc):
-#    doc.json = json.loads(doc.json)
-#    return doc
-
 @app.get("/search/<manifest>")
 def search_get(manifest):
     term = request.args.get('q', '')
@@ -22,7 +18,6 @@ def search_get(manifest):
     for doc in res.docs:
         container = json.loads(doc.json)
         items.append(container['annotation'])
-    
     dict = {
         "@context": "http://iiif.io/api/search/2/context.json",
         "id": "url",
