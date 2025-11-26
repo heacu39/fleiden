@@ -6,17 +6,16 @@ from redis.commands.search.query import Query
 app = Flask(__name__)
 application = app
 
-pool = redis.ConnectionPool(host='178.62.124.120', port=6379, db=0)
-#pool = redis.ConnectionPool(host='192.168.1.20', port=6379, db=0)
-red = redis.Redis(connection_pool=pool)
+r = redis.Redis(host='178.62.124.120', port=6379)
+r.ping()
+
 
 @app.route('/')
 def hello_world():
     return 'Hello Fleiden!'
     
-@app.route("/search/<lepcha>")
-def entries(lepcha):
-    q = Query(f"@value:ᰓᰨᰠ").paging(0, 9999)
-    res = red.ft('jvm').search(q)
+@app.route("/search/<term>")
+def search(term):
+    res = r.ft('jvm').search(Query("@value:ᰓᰨᰠ"))
     docs = map(parseJSON, res.docs)
-    return render_template('results.html', total=res.total, lepcha=lepcha, docs=docs, repr=f"{res}")
+    return render_template('results.html', total=res.total, term=term, docs=docs)
