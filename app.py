@@ -13,3 +13,10 @@ red = redis.Redis(connection_pool=pool)
 @app.route('/')
 def hello_world():
     return 'Hello Fleiden!'
+    
+@app.route("/search/<lepcha>")
+def entries(prefix):
+    q = Query(f"@value:{{{lepcha}}}").paging(0, 9999)
+    res = red.ft('jvm').search(q)
+    docs = map(parseJSON, res.docs)
+    return render_template('results.html', total=res.total, lepcha=lepcha, docs=docs, repr=f"{res}")
