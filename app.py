@@ -17,7 +17,7 @@ def search_get(manifest):
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}"))
     #docs = map(parseJSON, res.docs)
-    return render_template("results.html", docs = docs)
+    #return render_template("results.html", docs = docs)
     items = []
     for doc in res.docs:
         container = json.loads(doc.json)
