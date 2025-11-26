@@ -16,8 +16,7 @@ def hello_world():
     
 @app.route("/search/<lepcha>")
 def entries(lepcha):
-    return "{{{lepcha}}}"
-    #q = Query(f"@value:{{{lepcha}}}").paging(0, 9999)
-    #res = red.ft('jvm').search(q)
-    #docs = map(parseJSON, res.docs)
-    #return render_template('results.html', total=res.total, lepcha=lepcha, docs=docs, repr=f"{res}")
+    q = Query(f"@value:ᰓᰨᰠ").paging(0, 9999)
+    res = red.ft('jvm').search(q)
+    docs = map(parseJSON, res.docs)
+    return render_template('results.html', total=res.total, lepcha=lepcha, docs=docs, repr=f"{res}")
