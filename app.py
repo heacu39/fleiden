@@ -19,7 +19,7 @@ def search_get(manifest):
     docs = map(parseJSON, res.docs)
     items = []
     for doc in docs:
-        items.append(doc.json.annotation)
+        items.append(doc.json)
     dict = {
         "items": items
     }        
