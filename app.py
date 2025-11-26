@@ -14,6 +14,8 @@ def hello_world():
     
 @app.route("/search/<term>")
 def search(term):
-    res = r.ft('jvm').search(Query("@value:ᰓᰨᰠ"))
-    docs = map(parseJSON, res.docs)
-    return render_template('results.html', total=res.total, term=term, docs=docs)
+    return term
+    #res = r.ft('jvm').search(Query("@value:ᰓᰨᰠ"))
+    #docs = map(parseJSON, res.docs)
+    #return render_template('results.html', total=res.total, term=term, docs=docs)
+    
