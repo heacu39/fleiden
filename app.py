@@ -21,5 +21,5 @@ def search_get():
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"@value:{{{term}}}"))
     docs = map(parseJSON, res.docs)
-    jsonify(docs)
+    return jsonify(docs)
     #return render_template('results.html', docs=docs)
