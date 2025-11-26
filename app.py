@@ -24,4 +24,3 @@ def search_get(manifest):
         "items": items
     }        
     return jsonify(dict)
-    #m335412
