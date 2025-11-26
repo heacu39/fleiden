@@ -15,7 +15,11 @@ def hello_world():
 @app.route("/search/<term>")
 def search(term):
     r = redis.Redis(host='178.62.124.120', port=6379)
-    return r.ping
+    try:
+        is_connected = r.ping()
+        return "it's a go!"
+    except redis.ConnectionError:
+        return "error"
     #res = r.ft('jvm').search(Query("@edge:right"))
     #return term
     #docs = map(parseJSON, res.docs)
