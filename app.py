@@ -9,7 +9,7 @@ application = app
 r = redis.Redis(host='178.62.124.120', port=6379)
 
 def parseJSON(doc):
-    doc = json.loads(doc.json)
+    doc.json = json.loads(doc.json)
     return doc
     
 @app.route('/')
