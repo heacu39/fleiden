@@ -6,7 +6,7 @@ from redis.commands.search.query import Query
 app = Flask(__name__)
 application = app
 
-#r = redis.Redis(host='178.62.124.120', port=6379)
+r = redis.Redis(host='178.62.124.120', port=6379)
 
 @app.route('/')
 def hello_world():
@@ -14,14 +14,13 @@ def hello_world():
     
 @app.route("/search/<term>")
 def search(term):
-    r = redis.Redis(host='178.62.124.120', port=6379)
-    try:
-        is_connected = r.ping()
-        return "it's a go!"
-    except redis.ConnectionError:
-        return "error"
-    #res = r.ft('jvm').search(Query("@edge:right"))
-    #return term
-    #docs = map(parseJSON, res.docs)
-    #return render_template('results.html', total=res.total, term=term, docs=docs)
+    res = r.ft('jvm').search(Query(f"@value:{{{term}}}"))
+    docs = map(parseJSON, res.docs)
+    return render_template('results.html', total=res.total, term=term, docs=docs)
+    #try:
+    #    is_connected = r.ping()
+    #    return "it's a go!"
+    #except redis.ConnectionError:
+    #    return "error"
+
     
