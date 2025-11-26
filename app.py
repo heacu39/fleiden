@@ -19,6 +19,7 @@ def hello_world():
 @app.get("/search")
 def search_get():
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@manifest:{https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:335412/manifest} @value:{{{term}}}"))
+    manifest = "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:335412/manifest"
+    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}"))
     docs = map(parseJSON, res.docs)
     return jsonify(docs)
