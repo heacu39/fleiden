@@ -21,7 +21,7 @@ def search_get(manifest):
     items = []
     for doc in res.docs:
         container = json.loads(doc.json)
-        items.append(container.annotation)
+        items.append(container['annotation'])
     
     dict = {
         "@context": "http://iiif.io/api/search/2/context.json",
