@@ -17,10 +17,14 @@ def search_get(manifest):
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}"))
     docs = map(parseJSON, res.docs)
-    items = []
-    for doc in docs:
-        items.append(doc.json.annotation)
-    dict = {
-        "items": items
-    }        
-    return jsonify(dict)
+    return render_template("results.html", docs = docs)
+    #items = []
+    #for doc in docs:
+    #    items.append(doc.json.annotation)
+    #dict = {
+    #    "@context": "http://iiif.io/api/search/2/context.json",
+    #    "id": "url",
+    #    "type": "AnnotationPage",
+    #    "items": items
+    #}        
+    #return jsonify(dict)
