@@ -48,6 +48,12 @@
             "value": "http://hdl.handle.net/1887.1/item:335412"
         }
     ],
+	"service": [
+		{
+			"id": "https://fleiden-u6old.ondigitalocean.app/search/m335412",
+			"type": "SearchService2"
+		}
+	],
     "license": "Full access. <a href='https://creativecommons.org/publicdomain/mark/1.0/'>The rights status of this resource is public domain</a>",
     "attribution": "Leiden University Libraries",
     "viewingDirection": "left-to-right",
@@ -56,12 +62,6 @@
         {
             "@type": "sc:Sequence",
             "label": "Rum-mít náng-se sá nám-thár I.KERN 2740/L47",
-			"service": [
-				{
-					"id": "https://fleiden-u6old.ondigitalocean.app/search/m335412",
-					"type": "SearchService2"
-				}
-			],
             "canvases": [
                 {
                     "@type": "sc:Canvas",
