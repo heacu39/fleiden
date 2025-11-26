@@ -1,9 +1,15 @@
 {
     "@context": "http://iiif.io/api/presentation/2/context.json",
-    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:335412/manifest",
+    "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/m335412",
     "@type": "sc:Manifest",
     "label": "Rum-mít náng-se sá nám-thár I.KERN 2740/L47",
     "logo": "https://iiifviewer.universiteitleiden.nl/logo/",
+	"service": [
+		{
+			"id": "https://fleiden-u6old.ondigitalocean.app/search/m335412",
+			"type": "SearchService2"
+		}
+	],
     "metadata": [
         {
             "label": "Title",
