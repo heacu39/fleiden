@@ -19,7 +19,7 @@ def hello_world():
 @app.get("/search")
 def search_get():
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@value:{term}"))
+    res = r.ft('jvm').search(Query(f"@value:ᰠ"))
     return res.docs
     #docs = map(parseJSON, res.docs)
     #return render_template('results.html', total=res.total, term=term, docs=docs)
