@@ -11,20 +11,17 @@ r = redis.Redis(host='178.62.124.120', port=6379)
 def parseJSON(doc):
     doc.json = json.loads(doc.json)
     return doc
-    
-@app.route('/')
-def hello_world():
-    return 'Hello Fleiden!'
-    
-@app.get("/search")
-def search_get():
+
+@app.get("/search/<manifest>")
+def search_get(manifest):
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@manifest:{m335412} @value:{{{term}}}"))
+    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}"))
     docs = map(parseJSON, res.docs)
     items = []
-    for doc in docs
+    for doc in docs:
         items.append(doc.json.annotation)
     dict = {
         "items": items
     }        
     return jsonify(dict)
+    #m335412
