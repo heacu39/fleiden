@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 import json
 import redis
 from redis.commands.search.query import Query
@@ -16,15 +16,10 @@ def parseJSON(doc):
 def hello_world():
     return 'Hello Fleiden!'
     
-@app.route("/search/<term>")
-def search(term):
-    res = r.ft('jvm').search(Query(f"@value:{{{term}}}"))
-    docs = map(parseJSON, res.docs)
-    return render_template('results.html', total=res.total, term=term, docs=docs)
-    #try:
-    #    is_connected = r.ping()
-    #    return "it's a go!"
-    #except redis.ConnectionError:
-    #    return "error"
-
-    
+@app.get("/search")
+def search_get():
+    term = request.args.get('q', '')
+    res = r.ft('jvm').search(Query(f"@value:{{{term}}} @manifest:https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:335412/manifest"))
+    return res
+    #docs = map(parseJSON, res.docs)
+    #return render_template('results.html', total=res.total, term=term, docs=docs)
