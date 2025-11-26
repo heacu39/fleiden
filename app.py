@@ -20,7 +20,7 @@ def search_get(manifest):
         items.append(container['annotation'])
     dict = {
         "@context": "http://iiif.io/api/search/2/context.json",
-        "id": "url",
+        "id": request.url,
         "type": "AnnotationPage",
         "items": items
     }        
