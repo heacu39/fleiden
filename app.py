@@ -14,6 +14,8 @@ def hello_world():
     
 @app.route("/search/<term>")
 def search(term):
+    r = redis.Redis(host='178.62.124.120', port=6379)
+    r.ping
     return term
     #res = r.ft('jvm').search(Query("@value:ᰓᰨᰠ"))
     #docs = map(parseJSON, res.docs)
