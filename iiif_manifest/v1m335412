@@ -52,7 +52,7 @@
     "@context": "http://iiif.io/api/search/1/context.json",
     "@id": "https://fleiden-u6old.ondigitalocean.app/v1/search/m335412",
     "profile": "http://iiif.io/api/search/1/search"
-  }
+  },
     "license": "Full access. <a href='https://creativecommons.org/publicdomain/mark/1.0/'>The rights status of this resource is public domain</a>",
     "attribution": "Leiden University Libraries",
     "viewingDirection": "left-to-right",
