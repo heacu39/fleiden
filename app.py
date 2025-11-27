@@ -33,14 +33,17 @@ def v1search_get(manifest):
     resources = []
     for doc in res.docs:
         container = json.loads(doc.json)
-        container['resource'] = container['annotation']
-        container['resource']['@type'] = 'oa:Annotation'
-        container['resource']['motivation'] = 'sc:painting'
-        container['resource']['resource']['@type'] = "cnt:ContentAsText"
-        container['resource']['resource']['chars'] = container['annotation']['body']['value']
-        container['resource']['on'] = container['annotation']['target']
-        del container['annotation']
-        resources.append(container['resource'])
+        resource = {
+            "@id": container['annotation']['id']
+            "@type": "oa:Annotation",
+            "motivation": "sc:painting",
+            "resource": {
+                "@type": "cnt:ContentAsText",
+                "chars": container['annotation']['body']['value']
+            },
+            "on": container['annotation']['target']
+        }
+        resources.append(resource)
     dict = {
         "@context": "http://iiif.io/api/presentation/2/context.json",
         "@id": request.url,
