@@ -45,7 +45,10 @@ def v1search_get(manifest):
         }
         resources.append(resource)
     dict = {
-        "@context": "http://iiif.io/api/presentation/2/context.json",
+        "@context": [
+            "http://iiif.io/api/presentation/2/context.json",
+            "http://iiif.io/api/search/1/context.json"
+        ],
         "@id": request.url,
         "@type": "sc:AnnotationList",
         "resources": resources
