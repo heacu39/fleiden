@@ -25,3 +25,26 @@ def search_get(manifest):
         "items": items
     }        
     return jsonify(dict)
+    
+@app.get("/v1/search/<manifest>")
+def v1search_get(manifest):
+    term = request.args.get('q', '')
+    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}"))
+    resources = []
+    for doc in res.docs:
+        container = json.loads(doc.json)
+        container['resource'] = container['annotation']
+        container['resource']['@type'] = 'oa:Annotation'
+        container['resource']['motivation'] = 'sc:painting'
+        container['resource']['resource']['@type'] = "cnt:ContentAsText"
+        container['resource']['resource']['chars'] = container['annotation']['body']['value']
+        container['resource']['on'] = container['annotation']['target']
+        del container['annotation']
+        resources.append(container['resource'])
+    dict = {
+        "@context": "http://iiif.io/api/presentation/2/context.json",
+        "@id": request.url,
+        "@type": "sc:AnnotationList",
+        "resources": resources
+    }        
+    return jsonify(dict)
