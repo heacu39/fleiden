@@ -1,0 +1,718 @@
+{
+    "@context": "http://iiif.io/api/presentation/2/context.json",
+    "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m338367",
+    "@type": "sc:Manifest",
+    "label": "Thok-drá mun-lóm I.KERN 2740/L3",
+    "logo": "https://iiifviewer.universiteitleiden.nl/logo/",
+    "metadata": [
+        {
+            "label": "Title",
+            "value": "Thok-drá mun-lóm I.KERN 2740/L3"
+        },
+        {
+            "label": "Subject (topical)",
+            "value": "Manuscripts (documents)"
+        },
+        {
+            "label": "Country",
+            "value": {
+                "@value": "Netherlands",
+                "@language": "eng"
+            }
+        },
+        {
+            "label": "Language",
+            "value": {
+                "@value": "Sino-Tibetan (Other)",
+                "@language": "eng"
+            }
+        },
+        {
+            "label": "Extent",
+            "value": "1 online resource (33 pages)"
+        },
+        {
+            "label": "Subject (topical)",
+            "value": "Prayers"
+        },
+        {
+            "label": "Subject (topical)",
+            "value": "Lepcha (language)"
+        },
+        {
+            "label": "Published",
+            "value": "[Place of production not identified : producer not identified], [Date unknown]"
+        },
+        {
+            "label": "Shelfmark",
+            "value": "I.KERN 2740/L3"
+        },
+        {
+            "label": "Persistent URL",
+            "value": "http://hdl.handle.net/1887.1/item:338367"
+        }
+    ],
+  "service": {
+    "@context": "http://iiif.io/api/search/1/context.json",
+    "@id": "https://fleiden-u6old.ondigitalocean.app/v1/search/m338367",
+    "profile": "http://iiif.io/api/search/1/search"
+  },
+    "license": "Full access. <a href='https://creativecommons.org/publicdomain/mark/1.0/'>The rights status of this resource is public domain</a>",
+    "attribution": "Leiden University Libraries",
+    "viewingDirection": "left-to-right",
+    "viewingHint": "paged",
+    "sequences": [
+        {
+            "@type": "sc:Sequence",
+            "label": "Thok-drá mun-lóm I.KERN 2740/L3",
+            "canvases": [
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338375/canvas/default",
+                    "label": "item:338367-0001",
+                    "height": 2010,
+                    "width": 1704,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338375/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338375",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338375",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338375/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 2010,
+                                "width": 1704,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338375",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338375/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338384/canvas/default",
+                    "label": "item:338367-0002",
+                    "height": 3223,
+                    "width": 1711,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338384/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338384",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338384",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338384/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3223,
+                                "width": 1711,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338384",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338384/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338371/canvas/default",
+                    "label": "item:338367-0003",
+                    "height": 3232,
+                    "width": 2162,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338371/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338371",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338371",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338371/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3232,
+                                "width": 2162,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338371",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338371/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338368/canvas/default",
+                    "label": "item:338367-0004",
+                    "height": 3228,
+                    "width": 1736,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338368/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338368",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338368",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338368/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3228,
+                                "width": 1736,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338368",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338368/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338376/canvas/default",
+                    "label": "item:338367-0005",
+                    "height": 3236,
+                    "width": 1755,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338376/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338376",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338376",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338376/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3236,
+                                "width": 1755,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338376",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338376/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338373/canvas/default",
+                    "label": "item:338367-0006",
+                    "height": 3227,
+                    "width": 1735,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338373/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338373",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338373",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338373/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3227,
+                                "width": 1735,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338373",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338373/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338383/canvas/default",
+                    "label": "item:338367-0007",
+                    "height": 3227,
+                    "width": 1726,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338383/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338383",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338383",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338383/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3227,
+                                "width": 1726,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338383",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338383/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338382/canvas/default",
+                    "label": "item:338367-0008",
+                    "height": 3231,
+                    "width": 1712,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338382/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338382",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338382",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338382/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3231,
+                                "width": 1712,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338382",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338382/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338379/canvas/default",
+                    "label": "item:338367-0009",
+                    "height": 3219,
+                    "width": 1711,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338379/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338379",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338379",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338379/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3219,
+                                "width": 1711,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338379",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338379/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338378/canvas/default",
+                    "label": "item:338367-0010",
+                    "height": 3224,
+                    "width": 1717,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338378/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338378",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338378",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338378/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3224,
+                                "width": 1717,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338378",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338378/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338380/canvas/default",
+                    "label": "item:338367-0011",
+                    "height": 3221,
+                    "width": 1770,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338380/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338380",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338380",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338380/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3221,
+                                "width": 1770,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338380",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338380/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338370/canvas/default",
+                    "label": "item:338367-0012",
+                    "height": 3237,
+                    "width": 1766,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338370/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338370",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338370",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338370/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3237,
+                                "width": 1766,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338370",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338370/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338369/canvas/default",
+                    "label": "item:338367-0013",
+                    "height": 3235,
+                    "width": 1767,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338369/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338369",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338369",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338369/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3235,
+                                "width": 1767,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338369",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338369/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338377/canvas/default",
+                    "label": "item:338367-0014",
+                    "height": 3235,
+                    "width": 1755,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338377/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338377",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338377",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338377/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3235,
+                                "width": 1755,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338377",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338377/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338372/canvas/default",
+                    "label": "item:338367-0015",
+                    "height": 3237,
+                    "width": 1760,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338372/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338372",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338372",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338372/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3237,
+                                "width": 1760,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338372",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338372/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338385/canvas/default",
+                    "label": "item:338367-0016",
+                    "height": 3231,
+                    "width": 1735,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338385/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338385",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338385",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338385/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3231,
+                                "width": 1735,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338385",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338385/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338374/canvas/default",
+                    "label": "item:338367-0017",
+                    "height": 3228,
+                    "width": 1729,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338374/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338374",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338374",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338374/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3228,
+                                "width": 1729,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338374",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338374/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338381/canvas/default",
+                    "label": "item:338367-0018",
+                    "height": 3226,
+                    "width": 1696,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338381/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338381",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338381",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338381/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 3226,
+                                "width": 1696,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338381",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338381/canvas/default"
+                        }
+                    ]
+                },
+                {
+                    "@type": "sc:Canvas",
+                    "@id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338386/canvas/default",
+                    "label": "item:338367-0019",
+                    "height": 1697,
+                    "width": 1697,
+                    "thumbnail": {
+                        "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338386/full/80,/0/default.jpg",
+                        "service": {
+                            "@context": "http://iiif.io/api/image/2/context.json",
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338386",
+                            "profile": "http://iiif.io/api/image/2/level2.json"
+                        }
+                    },
+                    "images": [
+                        {
+                            "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338386",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338386/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "height": 1697,
+                                "width": 1697,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%252Fitem:338386",
+                                    "profile": "http://iiif.io/api/image/2/level2.json"
+                                }
+                            },
+                            "on": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:338386/canvas/default"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
