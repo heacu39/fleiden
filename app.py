@@ -34,7 +34,7 @@ def v1search_get(manifest):
     for doc in res.docs:
         container = json.loads(doc.json)
         resource = {
-            "@id": container['annotation']['id']
+            "@id": container['annotation']['id'],
             "@type": "oa:Annotation",
             "motivation": "sc:painting",
             "resource": {
