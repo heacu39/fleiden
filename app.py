@@ -29,7 +29,7 @@ def search_get(manifest):
 @app.get("/v1/search/<manifest>")
 def v1search_get(manifest):
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}"))
+    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}").paging(0, 9999))
     resources = []
     for doc in res.docs:
         container = json.loads(doc.json)
