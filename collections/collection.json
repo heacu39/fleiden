@@ -31,6 +31,26 @@
       "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m333774",
       "@type": "sc:Manifest",
       "label": "333774"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m335106",
+      "@type": "sc:Manifest",
+      "label": "335106"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m335412",
+      "@type": "sc:Manifest",
+      "label": "335412"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m337873",
+      "@type": "sc:Manifest",
+      "label": "337873"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m338367",
+      "@type": "sc:Manifest",
+      "label": "338367"
     }
   ]
 }

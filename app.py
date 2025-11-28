@@ -11,7 +11,23 @@ r = redis.Redis(host='178.62.124.120', port=6379)
 def parseJSON(doc):
     doc.json = json.loads(doc.json)
     return doc
-    
+
+@app.get("/v1/collection")
+def collection_search(): 
+    term = request.args.get('q', '')
+    res = r.ft('jvm').search(Query(f"@value:{{{term}}}"))
+    items = []
+    for doc in res.docs:
+        container = json.loads(doc.json)
+        items.append(container['annotation'])
+    dict = {
+        "@context": "http://iiif.io/api/search/2/context.json",
+        "id": request.url,
+        "type": "AnnotationPage",
+        "items": items
+    }        
+    return jsonify(dict)
+
 @app.get("/page/<manifest>")
 def page_search(manifest):
     term = request.args.get('q', '')
