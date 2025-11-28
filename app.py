@@ -15,16 +15,29 @@ def parseJSON(doc):
 @app.get("/v1/collection")
 def collection_search(): 
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@value:{{{term}}}"))
-    items = []
+    res = r.ft('jvm').search(Query(f"@value:{{{term}}}").paging(0, 9999))
+    resources = []
     for doc in res.docs:
         container = json.loads(doc.json)
-        items.append(container['annotation'])
+        resource = {
+            "@id": container['annotation']['id'],
+            "@type": "oa:Annotation",
+            "motivation": "sc:painting",
+            "resource": {
+                "@type": "cnt:ContentAsText",
+                "chars": container['annotation']['body']['value']
+            },
+            "on": container['annotation']['target']
+        }
+        resources.append(resource)
     dict = {
-        "@context": "http://iiif.io/api/search/2/context.json",
-        "id": request.url,
-        "type": "AnnotationPage",
-        "items": items
+        "@context": [
+            "http://iiif.io/api/presentation/2/context.json",
+            "http://iiif.io/api/search/1/context.json"
+        ],
+        "@id": request.url,
+        "@type": "sc:AnnotationList",
+        "resources": resources
     }        
     return jsonify(dict)
 
@@ -43,7 +56,7 @@ def page_search(manifest):
 @app.get("/search/<manifest>")
 def search_get(manifest):
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}"))
+    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}").paging(0, 9999))
     #docs = map(parseJSON, res.docs)
     #return render_template("results.html", docs = docs)
     items = []
