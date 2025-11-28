@@ -8,15 +8,21 @@ application = app
 
 r = redis.Redis(host='178.62.124.120', port=6379)
 
+def parseJSON(doc):
+    doc.json = json.loads(doc.json)
+    return doc
+    
 @app.get("/page/<manifest>")
 def page_search(manifest):
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @page:{term}").summarize().highlight())
-    items = []
-    for doc in res.docs:
-        container = json.loads(doc.json)
-        items.append(container)
-    return jsonify(items)
+    docs = map(parseJSON, res.docs)
+    return jsonify(docs)
+    #items = []
+    #for doc in res.docs:
+    #    container = json.loads(doc.json)
+    #    items.append(container)
+    #return jsonify(items)
     
 @app.get("/search/<manifest>")
 def search_get(manifest):
