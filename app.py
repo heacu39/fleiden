@@ -17,7 +17,7 @@ def page_search(manifest):
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @page:{term}").summarize().highlight())
     docs = map(parseJSON, res.docs)
-    return jsonify(docs)
+    return render_template('results.html', docs=docs)
     #items = []
     #for doc in res.docs:
     #    container = json.loads(doc.json)
