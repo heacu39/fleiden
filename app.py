@@ -21,7 +21,7 @@ def page_search(manifest):
 @app.get("/search/<manifest>")
 def search_get(manifest):
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}"))
+    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}").slop(1))
     #docs = map(parseJSON, res.docs)
     #return render_template("results.html", docs = docs)
     items = []
