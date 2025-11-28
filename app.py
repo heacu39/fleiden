@@ -8,6 +8,15 @@ application = app
 
 r = redis.Redis(host='178.62.124.120', port=6379)
 
+@app.get("/page/search")
+    term = request.args.get('q', '')
+    res = r.ft('jvm').search(Query(f"@page:{{{term}}} SLOP {1}"))
+    items = []
+    for doc in res.docs:
+        container = json.loads(doc.json)
+        items.append(container)
+    return jsonify(items)
+    
 @app.get("/search/<manifest>")
 def search_get(manifest):
     term = request.args.get('q', '')
