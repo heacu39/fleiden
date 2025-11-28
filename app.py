@@ -17,7 +17,7 @@ def page_search(manifest):
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"{term}").summarize().highlight())
     docs = map(parseJSON, res.docs)
-    return render_template('results.html', docs=docs)
+    return render_template('results.html', docs=docs, repr=f"{res}")
     #items = []
     #for doc in res.docs:
     #    container = json.loads(doc.json)
