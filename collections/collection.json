@@ -1,0 +1,32 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "http://example.org/iiif/collection/top",
+  "@type": "sc:Collection",
+  "label": "Van Manen Lepcha Collection",
+  "viewingHint": "top",
+  "description": "Van Manen Lepcha Collection",
+  "attribution": "Leiden University Library",
+
+  "manifests": [
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m331464",
+      "@type": "sc:Manifest",
+      "label": "331464"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m332207",
+      "@type": "sc:Manifest",
+      "label": "332207"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m333703",
+      "@type": "sc:Manifest",
+      "label": "333703"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m333774",
+      "@type": "sc:Manifest",
+      "label": "333774"
+    }
+  ]
+}
