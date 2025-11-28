@@ -31,7 +31,7 @@ def collection_search():
                 "@id": container['annotation']['target'],
                 "within": {
                     "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1" + container['manifest'],
-                    "type": "sc:Manifest",
+                    "@type": "sc:Manifest",
                     "label": "A manifest"
                 }
             }    
