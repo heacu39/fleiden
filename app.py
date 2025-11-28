@@ -11,7 +11,7 @@ r = redis.Redis(host='178.62.124.120', port=6379)
 @app.get("/page/<manifest>")
 def page_search(manifest):
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@page:{{{term}}}"))
+    res = r.ft('jvm').search(Query(f"@page:{term}"))
     items = []
     for doc in res.docs:
         container = json.loads(doc.json)
