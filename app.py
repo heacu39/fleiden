@@ -15,7 +15,7 @@ def parseJSON(doc):
 @app.get("/page/<manifest>")
 def page_search(manifest):
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @page:{term}").highlight(fields=("page"), tags=("<b>", "</b>")))
+    res = r.ft('jvm').search(Query(f"{term}").summarize().highlight()
     docs = map(parseJSON, res.docs)
     return render_template('results.html', docs=docs)
     #items = []
