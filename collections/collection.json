@@ -1,12 +1,16 @@
 {
   "@context": "http://iiif.io/api/presentation/2/context.json",
-  "@id": "http://example.org/iiif/collection/top",
+  "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/collections/collection.json",
   "@type": "sc:Collection",
   "label": "Van Manen Lepcha Collection",
   "viewingHint": "top",
   "description": "Van Manen Lepcha Collection",
   "attribution": "Leiden University Library",
-
+  "service": {
+    "@context": "http://iiif.io/api/search/1/context.json",
+    "@id": "https://fleiden-u6old.ondigitalocean.app/v1/collection",
+    "profile": "http://iiif.io/api/search/1/search"
+  },
   "manifests": [
     {
       "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m331464",
