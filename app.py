@@ -13,7 +13,7 @@ def parseJSON(doc):
     return doc
 
 @app.get("/v1/collection")
-def collection_search(): 
+def collection_search():
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"@value:{{{term}}}").paging(0, 9999))
     resources = []
@@ -27,7 +27,14 @@ def collection_search():
                 "@type": "cnt:ContentAsText",
                 "chars": container['annotation']['body']['value']
             },
-            "on": container['annotation']['target']
+            "on": {
+                "@id": container['annotation']['target'],
+                "within": {
+                    "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1" + container['manifest'],
+                    "type": "sc:Manifest",
+                    "label": "A manifest"
+                }
+            }    
         }
         resources.append(resource)
     dict = {
