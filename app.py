@@ -8,7 +8,8 @@ application = app
 
 r = redis.Redis(host='178.62.124.120', port=6379)
 
-@app.get("/page/search")
+@app.get("/page")
+def page_search:
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"@page:{{{term}}} SLOP {1}"))
     items = []
