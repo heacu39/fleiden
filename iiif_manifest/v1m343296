@@ -61,7 +61,7 @@
     ],
   "service": {
     "@context": "http://iiif.io/api/search/1/context.json",
-    "@id": "https://fleiden-u6old.ondigitalocean.app/v1/search/m333774",
+    "@id": "https://fleiden-u6old.ondigitalocean.app/v1/search/m343296",
     "profile": "http://iiif.io/api/search/1/search"
   },
     "license": "Download provided. <a href='http://rightsstatements.org/vocab/UND/1.0/'>The rights status of this resource is undetermined</a>",
