@@ -1,0 +1,61 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_collection/v1collection.json",
+  "@type": "sc:Collection",
+  "label": "Van Manen Lepcha Collection",
+  "viewingHint": "top",
+  "description": "Van Manen Lepcha Collection",
+  "attribution": "Leiden University Library",
+  "service": {
+    "@context": "http://iiif.io/api/search/1/context.json",
+    "@id": "https://fleiden-u6old.ondigitalocean.app/v1/collection",
+    "profile": "http://iiif.io/api/search/1/search"
+  },
+  "manifests": [
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m333774",
+      "@type": "sc:Manifest",
+      "label": "Táng-ku nám-thár I.KERN 2740/L1"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m338367",
+      "@type": "sc:Manifest",
+      "label": "Thok-drá mun-lóm I.KERN 2740/L3"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m343296",
+      "@type": "sc:Manifest",
+      "label": "Kár-thák úk-dre sá sung / I.KERN 2740/L13"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m331464",
+      "@type": "sc:Manifest",
+      "label": "Rum pun-di sá nám-thár I.KERN 2740/L36"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m335412",
+      "@type": "sc:Manifest",
+      "label": "Rum-mít náng-se sá nám-thár I.KERN 2740/L47"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m335106",
+      "@type": "sc:Manifest",
+      "label": "Gú-rú cho-óng sá nám-thár I.KERN 2740/L48"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m332207",
+      "@type": "sc:Manifest",
+      "label": "Táng-ku nám-thár I.KERN 2740/L72"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m333703",
+      "@type": "sc:Manifest",
+      "label": "Trí-mík kun-den sá nám-thár I.KERN 2740/L147"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m337873",
+      "@type": "sc:Manifest",
+      "label": "Trí-mík kun-den sá nám-thár I.KERN 2740/L152"
+    },
+  ]
+}
