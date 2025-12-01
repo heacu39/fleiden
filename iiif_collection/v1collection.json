@@ -28,6 +28,11 @@
       "label": "Kár-thák úk-dre sá sung / I.KERN 2740/L13"
     },
     {
+      "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m1648027",
+      "@type": "sc:Manifest",
+      "label": "Ta-she sung I.KERN 2740/L23"
+    },
+    {
       "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1m331464",
       "@type": "sc:Manifest",
       "label": "Rum pun-di sá nám-thár I.KERN 2740/L36"
