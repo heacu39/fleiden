@@ -88,7 +88,7 @@ def cs1line_collection_search():
 @app.get("/cs1word/search/<manifest>")
 def cs1word_search_get(manifest):
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @mode:{word} @value:{{{term}}}").paging(0, 9999))
+    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @mode:{{word}} @value:{{{term}}}").paging(0, 9999))
     resources = []
     for doc in res.docs:
         container = json.loads(doc.json)
@@ -117,7 +117,7 @@ def cs1word_search_get(manifest):
 @app.get("/cs1line/search/<manifest>")
 def cs1line_search_get(manifest):
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}").paging(0, 9999))
+    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @mode:{{line}} @value:{{{term}}}").paging(0, 9999))
     resources = []
     for doc in res.docs:
         container = json.loads(doc.json)
@@ -146,7 +146,7 @@ def cs1line_search_get(manifest):
 @app.get("/cs2/search/<manifest>")
 def cs2_search_get(manifest):
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}").paging(0, 9999))
+    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @mode:{{word}} @value:{{{term}}}").paging(0, 9999))
     #docs = map(parseJSON, res.docs)
     #return render_template("results.html", docs = docs)
     items = []
