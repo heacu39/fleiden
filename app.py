@@ -48,8 +48,37 @@ def cs1_collection_search():
     }        
     return jsonify(dict)
     
-@app.get("/cs1/search/<manifest>")
-def cs1_search_get(manifest):
+@app.get("/cs1word/search/<manifest>")
+def cs1word_search_get(manifest):
+    term = request.args.get('q', '')
+    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}").paging(0, 9999))
+    resources = []
+    for doc in res.docs:
+        container = json.loads(doc.json)
+        resource = {
+            "@id": container['annotation']['id'],
+            "@type": "oa:Annotation",
+            "motivation": "sc:painting",
+            "resource": {
+                "@type": "cnt:ContentAsText",
+                "chars": container['annotation']['body']['value']
+            },
+            "on": container['annotation']['target']
+        }
+        resources.append(resource)
+    dict = {
+        "@context": [
+            "http://iiif.io/api/presentation/2/context.json",
+            "http://iiif.io/api/search/1/context.json"
+        ],
+        "@id": request.url,
+        "@type": "sc:AnnotationList",
+        "resources": resources
+    }        
+    return jsonify(dict)
+    
+@app.get("/cs1line/search/<manifest>")
+def cs1line_search_get(manifest):
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}").paging(0, 9999))
     resources = []
@@ -94,7 +123,7 @@ def cs2_search_get(manifest):
         "items": items
     }        
     return jsonify(dict)
-    
+
 @app.get("/page/<manifest>")
 def page_search(manifest):
     term = request.args.get('q', '')
