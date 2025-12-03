@@ -12,8 +12,45 @@ def parseJSON(doc):
     doc.json = json.loads(doc.json)
     return doc
 
-@app.get("/cs1/collection")
-def cs1_collection_search():
+@app.get("/cs1word/collection")
+def cs1word_collection_search():
+    term = request.args.get('q', '')
+    res = r.ft('jvm').search(Query(f"@value:{{{term}}}").paging(0, 9999))
+    resources = []
+    for doc in res.docs:
+        container = json.loads(doc.json)
+        resource = {
+            "@id": container['annotation']['id'],
+            "@type": "oa:Annotation",
+            "motivation": "sc:painting",
+            "resource": {
+                "@type": "cnt:ContentAsText",
+                "chars": container['annotation']['body']['value']
+            },
+            "on": {
+                "@id": container['annotation']['target'],
+                "within": {
+                    "@id": "https://raw.githubusercontent.com/heacu39/fleiden/refs/heads/main/iiif_manifest/v1" + container['manifest'],
+                    "@type": "sc:Manifest",
+                    "label": "A manifest"
+                }
+            }    
+        }
+        resources.append(resource)
+    dict = {
+        "@context": [
+            "http://iiif.io/api/presentation/2/context.json",
+            "http://iiif.io/api/search/1/context.json"
+        ],
+        "@id": request.url,
+        "@type": "sc:AnnotationList",
+        "resources": resources
+    }        
+    return jsonify(dict)
+    
+
+@app.get("/cs1line/collection")
+def cs1line_collection_search():
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"@value:{{{term}}}").paging(0, 9999))
     resources = []
