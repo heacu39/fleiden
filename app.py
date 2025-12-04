@@ -159,17 +159,41 @@ def cs1line_search_get(manifest):
 def cs2_search_get(manifest):
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @mode:{{word}} @value:{{{term}}}").paging(0, 9999))
-    #docs = map(parseJSON, res.docs)
-    #return render_template("results.html", docs = docs)
+    specifics = []
     items = []
     for doc in res.docs:
         container = json.loads(doc.json)
         items.append(container['annotation'])
+        specific = {
+            "id": container['annotation']['id'] + "-match",
+            "type": "Annotation",
+            "motivation": "contextualizing",
+            "target": {
+                "type": "SpecificResource",
+                "source": container['annotation']['id'],
+                "selector": [
+                    {
+                        "type": "TextQuoteSelector",  
+                        "prefix": container['before'],
+                        "exact": container['annotation']['body']['value'],
+                        "suffix": container['after']
+                    }
+                ]
+            }
+        }
+        specifics.append[specific]
+        
     dict = {
         "@context": "http://iiif.io/api/search/2/context.json",
         "id": request.url,
         "type": "AnnotationPage",
-        "items": items
+        "items": items,
+        "annotations": [
+            {
+                "type": "AnnotationPage",
+                "items": specifics
+            }
+        ]
     }        
     return jsonify(dict)
 
