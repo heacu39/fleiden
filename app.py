@@ -89,16 +89,6 @@ def cs1line_collection_search():
 def cs1word_search_get(manifest):
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}").paging(0, 9999))
-
-"hits": [
-    {
-      "@type": "search:Hit",
-      "annotations": [
-        "http://example.org/identifier/annotation/anno-bird"
-      ],
-      "before": "There are two ",
-      "after": " in the bush"
-    }
     hits = []
     resources = []
     for doc in res.docs:
@@ -133,7 +123,7 @@ def cs1word_search_get(manifest):
         "@type": "sc:AnnotationList",
         "resources": resources,
         "hits": hits
-    }        
+    }
     return jsonify(dict)
     
 @app.get("/cs1line/search/<manifest>")
