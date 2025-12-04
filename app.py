@@ -181,7 +181,7 @@ def cs2_search_get(manifest):
                 ]
             }
         }
-        specifics.append[specific]
+        specifics.append(specific)
         
     dict = {
         "@context": "http://iiif.io/api/search/2/context.json",
