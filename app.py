@@ -89,6 +89,17 @@ def cs1line_collection_search():
 def cs1word_search_get(manifest):
     term = request.args.get('q', '')
     res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @value:{{{term}}}").paging(0, 9999))
+
+"hits": [
+    {
+      "@type": "search:Hit",
+      "annotations": [
+        "http://example.org/identifier/annotation/anno-bird"
+      ],
+      "before": "There are two ",
+      "after": " in the bush"
+    }
+    hits = []
     resources = []
     for doc in res.docs:
         container = json.loads(doc.json)
@@ -103,6 +114,16 @@ def cs1word_search_get(manifest):
             "on": container['annotation']['target']
         }
         resources.append(resource)
+        hit = {
+            "@type": "search:Hit",
+            "annotations": [
+                container['annotation']['id']
+            ],
+            "before": container['before'],
+            "after": container['after']
+        }
+        hits.append(hit)
+        
     dict = {
         "@context": [
             "http://iiif.io/api/presentation/2/context.json",
@@ -110,14 +131,15 @@ def cs1word_search_get(manifest):
         ],
         "@id": request.url,
         "@type": "sc:AnnotationList",
-        "resources": resources
+        "resources": resources,
+        "hits": hits
     }        
     return jsonify(dict)
     
 @app.get("/cs1line/search/<manifest>")
 def cs1line_search_get(manifest):
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @text:{term}").highlight(fields=("text"), tags=("<b>", "</b>")).paging(0, 9999))
+    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @text:{term}").paging(0, 9999))
     resources = []
     for doc in res.docs:
         container = json.loads(doc.json)
