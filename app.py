@@ -129,7 +129,7 @@ def cs1word_search_get(manifest):
 @app.get("/cs1line/search/<manifest>")
 def cs1line_search_get(manifest):
     term = request.args.get('q', '')
-    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @text:{term}").paging(0, 9999))
+    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @text:\"{term}\"").paging(0, 9999))
     resources = []
     for doc in res.docs:
         container = json.loads(doc.json)
