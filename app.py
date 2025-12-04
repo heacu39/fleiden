@@ -173,3 +173,9 @@ def page_search(manifest):
     #    items.append(container)
     #return jsonify(items)
     
+@app.get("/test/search/<manifest>")
+def test_search_get(manifest):
+    term = request.args.get('q', '')
+    res = r.ft('jvm').search(Query(f"@manifest:{{{manifest}}} @text:{term}").highlight(fields=("text"), tags=("<b>", "</b>")).paging(0, 9999))
+    docs = map(parseJSON, res.docs)
+    return render_template('results.html', repr=f"{res}")
